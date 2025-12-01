@@ -56,4 +56,9 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    // 確保 ViewModel 可以被 Compose 畫面使用
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
+
+    // 確保能夠使用 ViewModelProvider.Factory 來傳入參數
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
 }
