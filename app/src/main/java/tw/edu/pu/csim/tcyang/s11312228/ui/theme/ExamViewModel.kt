@@ -22,6 +22,16 @@ class ExamViewModel(
     private val _screenHeightPx = mutableStateOf(initialHeightPx)
     val screenHeightPx: State<Int> = _screenHeightPx
 
+    // 顯示在螢幕上的成績/訊息 (例如: "分數: 100 (碰撞嬰幼兒圖示)")
+    private val _scoreMessage = mutableStateOf("等待碰撞...")
+    val scoreMessage: State<String> = _scoreMessage
+
+    // 更新成績和訊息的方法
+    fun updateScoreMessage(message: String) {
+        // 這裡我們只顯示訊息，假設成績部分您稍後會添加
+        _scoreMessage.value = "目前狀態: $message"
+    }
+
     /**
      * 自定義 ViewModel Factory，用於在初始化時傳入螢幕尺寸參數。
      */
